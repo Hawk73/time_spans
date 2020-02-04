@@ -16,7 +16,7 @@
 ## Development
 
         $ bundle install
-        $ irb
+        $ bundle exec irb
         $ require_relative 'lib/subtract_time_ranges'
         $ SubtractTimeRanges.new.call('(11:00-12:00) - (11:00-11:30)')
 
