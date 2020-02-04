@@ -13,7 +13,7 @@ RSpec.describe SubtractTimeRanges do
   input_strings_with_results.each do |input_string, result|
     context "when input_string is #{input_string}" do
       it 'returns true' do
-        expect(subject.call(input_string)).to be_truthy
+        expect(subject.call(input_string)).to eq(result)
       end
     end
   end

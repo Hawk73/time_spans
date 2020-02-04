@@ -14,7 +14,14 @@ module Helpers
     # example: [540,541..559,660,780,781..899,900]
     # output: [540, 660], [780, 900]
     def convert_set_to_ranges(set)
-      set.chunk_while { |a, b| a.succ == b  }.map(&:minmax)
+      ranges = set.chunk_while { |a, b| a.succ == b }.map(&:minmax)
+      filter_empty_ranges(ranges)
+    end
+
+    def filter_empty_ranges(ranges)
+      ranges.select do |range|
+        range.first != range.last
+      end
     end
 
     # example: [540, 660]
