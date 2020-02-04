@@ -8,7 +8,7 @@ class SubtractTimeRanges
   end
 
   def call(input_string)
-    ranges = parse_time_ranges.call(input_string)
+    first_ranges, first_ranges = parse_time_ranges.call(input_string)
     true
   end
 end

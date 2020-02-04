@@ -6,6 +6,7 @@ module Helpers
     TIME_SEPARATOR_REGEXP = /\s*:\s*/
 
     # example: "(9:00-11:00, 13:00-15:00) - (9:00-9:15, 10:00-10:15)"
+    # output: "[[[540, 660], [780, 900]], [[540, 555], [600, 615]]]"
     def call(input_string)
       match_data = input_string.match(PATTERN_REGEXP)
       first_part = match_data[1]
