@@ -1,6 +1,6 @@
-require 'helpers/convert_ranges_to_set'
-require 'helpers/humanize_set'
-require 'helpers/parse_time_ranges'
+require_relative 'helpers/convert_ranges_to_set'
+require_relative 'helpers/humanize_set'
+require_relative 'helpers/parse_time_ranges'
 
 class SubtractTimeRanges
   attr_accessor(
