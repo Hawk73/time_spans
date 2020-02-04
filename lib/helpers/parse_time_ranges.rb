@@ -1,6 +1,7 @@
 module Helpers
   class ParseTimeRanges
     PATTERN_REGEXP = /\((.*)\)\s*-\s*\((.*)\)/
+    TIME_RANGES_SEPARATOR_REGEXP = /\s*,\s*/
     TIME_RANGE_SEPARATOR_REGEXP = /\s*-\s*/
     TIME_SEPARATOR_REGEXP = /\s*:\s*/
 
@@ -16,7 +17,9 @@ module Helpers
 
     # example: "(9:00-11:00, 13:00-15:00)"
     def parse_time_ranges(ranges_string)
-      [parse_time_range(ranges_string)]
+      ranges_string.split(TIME_RANGES_SEPARATOR_REGEXP).map do |range_string|
+        parse_time_range(range_string)
+      end
     end
 
     # example: "9:00-11:00"
