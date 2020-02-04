@@ -21,6 +21,7 @@ class SubtractTimeRanges
 
   def call(input_string)
     first_ranges, second_ranges = parse_time_ranges.call(input_string)
+    # TODO: validate ranges
 
     first_set = convert_ranges_to_set.call(first_ranges)
     second_set = convert_ranges_to_set.call(remove_bordering_values(second_ranges))
