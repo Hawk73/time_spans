@@ -1,6 +1,6 @@
-require 'subtract_time_spans'
+require 'subtract_time_ranges'
 
-RSpec.describe SubtractTimeSpans do
+RSpec.describe SubtractTimeRanges do
   it 'returns true' do
     expect(subject.call).to be_truthy
   end
