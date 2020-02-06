@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Helpers
   class HumanizeSet
     # example: "[540,541..559,660,780,781..899,900]"
@@ -19,8 +21,8 @@ module Helpers
     end
 
     def filter_empty_ranges(ranges)
-      ranges.select do |range|
-        range.first != range.last
+      ranges.reject do |range|
+        range.first == range.last
       end
     end
 

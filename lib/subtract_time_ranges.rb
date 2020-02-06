@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'helpers/convert_ranges_to_set'
 require_relative 'helpers/humanize_set'
 require_relative 'helpers/parse_time_ranges'

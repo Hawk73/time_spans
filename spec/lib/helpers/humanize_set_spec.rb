@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'helpers/humanize_set'
 
 RSpec.describe Helpers::HumanizeSet do

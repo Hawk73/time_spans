@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'helpers/convert_ranges_to_set'
 
 RSpec.describe Helpers::ConvertRangesToSet do

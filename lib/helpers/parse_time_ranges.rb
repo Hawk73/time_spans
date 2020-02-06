@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module Helpers
   class ParseTimeRanges
-    PATTERN_REGEXP = /\((.*)\)\s*-\s*\((.*)\)/
-    TIME_RANGES_SEPARATOR_REGEXP = /\s*,\s*/
-    TIME_RANGE_SEPARATOR_REGEXP = /\s*-\s*/
-    TIME_SEPARATOR_REGEXP = /\s*:\s*/
+    PATTERN_REGEXP = /\((.*)\)\s*-\s*\((.*)\)/.freeze
+    TIME_RANGES_SEPARATOR_REGEXP = /\s*,\s*/.freeze
+    TIME_RANGE_SEPARATOR_REGEXP = /\s*-\s*/.freeze
+    TIME_SEPARATOR_REGEXP = /\s*:\s*/.freeze
 
     # example: "(9:00-11:00, 13:00-15:00) - (9:00-9:15, 10:00-10:15)"
     # output: "[[[540, 660], [780, 900]], [[540, 555], [600, 615]]]"
